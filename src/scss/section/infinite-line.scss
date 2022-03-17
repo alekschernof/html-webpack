@@ -1,0 +1,43 @@
+$b: '.s-line';
+
+#{$b} {
+  position: relative;
+  padding-top: rem(70px);
+  padding-bottom: rem(70px);
+
+  @include mobile {
+    padding-top: rem(50px);
+    padding-bottom: rem(50px);
+  }
+  
+  &__item {
+    &-container {
+      #{$b}._vse-ne-naprasno & {
+        width: rem(2125px + 80px);
+        padding-right: rem(80px);
+        
+        @include mobile {
+          width: rem(812px + 30px);
+          padding-right: rem(30px);
+        }
+      }
+    }
+  }
+
+  &__f-stone1 {
+    position: absolute;
+    width: rem(155px);
+    height: rem(149px);
+    left: 60%;
+    transform: translateX(-60%) translateY(-15%);
+    bottom: 0;
+    z-index: 2;
+
+    @include mobile {
+      width: rem(64px);
+      height: rem(85px);
+      left: rem(80px);
+      bottom: rem(15px);
+    }
+  }
+}

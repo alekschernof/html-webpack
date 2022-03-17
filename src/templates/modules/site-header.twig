@@ -1,0 +1,24 @@
+{% includeData 'header.json' as data %}
+<header class="site-header">
+    <div class="site-header__container">
+        <div class="site-header__navigations">
+            <span class="site-header__btn-projects js-open-header-menu">Проекты</span>
+            <div class="site-header__header-menu js-header-menu">
+                <div class="site-header__projects-list">
+                    {% for a in data.info.projectItem %}
+                        <p class="site-header__project {% if a.active === true %} active {% endif %}">
+                            <a target="_blank" href="{{ a.link }}" class="site-header__project-text {{ a.classService }}">
+                                {{ a.name }}
+                            </a>
+                        </p>
+                    {% endfor %}
+                </div>
+                <div class="site-header__other-links">
+                    <a href="#s-donate" class="button _outline site-header__anchor-link js-scroll-link">Помочь</a>
+                    <a href="https://nenaprasno.ru/" class="site-header__name-service">Фонд &laquo;Не&nbsp;напрасно&raquo;</a>
+                </div>
+            </div>
+        </div>
+        <div class="site-header__auth-app" id="root"></div>
+    </div>
+</header>

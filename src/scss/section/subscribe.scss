@@ -1,0 +1,262 @@
+$b: '.s-subscribe';
+
+#{$b} {
+  position: relative;
+  padding-top: rem(120px);
+  padding-bottom: rem(80px);
+
+  @include mobile {
+    padding-top: rem(80px);
+  }
+
+  &__newsletter-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: rem(120px);
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-bottom: rem(80px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      color: $white-true;
+    }
+  }
+
+  &__title {
+    flex: 0 1 55%;
+
+    @include mobile {
+      flex-basis: 100%;
+      margin-bottom: rem(29px);
+    }
+  }
+
+  &__form-subscribe {
+    position: relative;
+  }
+
+  &__form-input {
+    box-shadow: 0 rem(24px) rem(56px) $shadow-base;
+    border-radius: rem(24px);
+    background-color: $white-true;
+    padding: rem(16px) rem(24px);
+    flex: 0 1 100%;
+
+    &._textarea {
+      min-height: rem(80px);
+    }
+  }
+
+  &__subscribe-email {
+    width: 100%;
+    height: auto;
+    padding-right: rem(170px);
+    padding-top: rem(26px);
+    padding-bottom: rem(26px);
+  }
+
+  &__subscribe-submit {
+    position: absolute;
+    right: 0;
+    border-radius: rem(24px);
+    top: 0;
+    bottom: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+    color: $text-gray2;
+    min-width: rem(65px);
+    padding-left: rem(40px);
+    padding-right: rem(20px);
+    height: 80%;
+
+    &:hover {
+      background-color: $accent-base;
+      color: $white-true;
+
+      &::before {
+        background-image: url("../img/icon/done-white.svg");
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: rem(10px);
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      width: rem(12px);
+      height: rem(12px);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../img/icon/done-gray.svg");
+    }
+  }
+
+  &__form-item {
+    display: flex;
+    position: relative;
+    flex: 0 1 100%;
+    margin-bottom: rem(24px);
+  }
+
+  &__form-message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    z-index: -1;
+    opacity: 0;
+    max-width: 100%;
+    font-size: rem(16px);
+    line-height: rem(18px);
+    border-radius: rem(8px);
+    padding: 4px;
+    transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+
+    @include mobile {
+      font-size: rem(12px);
+      line-height: 1;
+      padding: rem(8px);
+    }
+
+    &._bottom {
+      bottom: 0;
+      left: 0;
+      right: auto;
+      top: auto;
+      transform: translateY(100%);
+    }
+
+    &._error {
+      box-shadow: inset 0 0 0 1px $error-color;
+      background-color: lighten($error-color, 35);
+      color: $error-color;
+    }
+
+    &._success {
+      box-shadow: inset 0 0 0 1px $success-color;
+      background-color: lighten($success-color, 35);
+      color: $success-color;
+    }
+
+    &._loading {
+      box-shadow: inset 0 0 0 1px $accent-base;
+      background-color: lighten($accent-base, 35);
+      color: $accent-base;
+    }
+
+    &.active {
+      z-index: 2;
+      opacity: 1;
+    }
+  }
+
+  &__feedback-content {
+    padding-top: rem(40px);
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      padding-top: rem(20px);
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__address-list {
+    flex: 0 1 45%;
+    display: flex;
+    flex-direction: column;
+    margin-right: rem(24px);
+
+    @include mobile {
+      margin-bottom: rem(20px);
+      margin-right: 0;
+      flex-basis: 100%;
+    }
+  }
+
+  &__address-item {
+    display: flex;
+    margin-bottom: rem(24px);
+  }
+
+  &__adress-label,
+  &__address-link {
+    font-size: rem(14px);
+    line-height: rem(24px);
+  }
+
+  &__address-label {
+    flex: 0 1 25%;
+    margin-right: rem(48px);
+  }
+
+  &__address-link {
+    font-weight: bold;
+    flex: 0 1 75%;
+
+    &:hover {
+      color: $accent-base;
+    }
+  }
+
+  &__feedback-form-container {
+    flex: 0 1 50%;
+
+    @include mobile {
+      flex-basis: 100%;
+    }
+  }
+
+  &__form-feedback {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__form-title {
+    font-weight: bold;
+    font-size: rem(32px);
+    line-height: rem(28px);
+    margin-bottom: rem(40px);
+  }
+
+  &__feedback-submit {
+    margin-left: auto;
+
+    @include mobile {
+      margin-right: auto;
+    }
+  }
+
+  &__bg-container {
+    bottom: -15%;
+    left: 0;
+
+    @include mobile {
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__stone-bg {
+    display: block;
+    height: auto;
+    min-height: 8rem;
+    width: 100%;
+  }
+}

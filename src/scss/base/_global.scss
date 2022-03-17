@@ -1,0 +1,75 @@
+$b: '.g';
+
+html {
+  --root-font-size: #{$root-font-size}px;
+  font-size: #{$root-font-size}px;
+
+  @include desktop-scale {
+    $mid-screen-width: strip-unit($tablet-width);
+    $max-screen-width: strip-unit($desktop-width);
+
+    @include css-lock(
+      #{$root-font-size * divide($mid-screen-width, $max-screen-width)},
+      $root-font-size,
+      $mid-screen-width,
+      $max-screen-width
+    );
+  }
+
+  @include mobile {
+    $min-screen-width: 320;
+    $mid-screen-width: 360;
+    $max-screen-width: 767;
+
+    @include css-lock-full(
+      #{$min-screen-width * $root-font-size / $mid-screen-width},
+      $root-font-size,
+      #{$max-screen-width * $root-font-size / $mid-screen-width},
+      $min-screen-width,
+      $mid-screen-width,
+      $max-screen-width
+    );
+  }
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  height: 100%;
+  font-family: $font-family-base;
+  font-size: $font-size;
+  font-weight: normal;
+  line-height: $line-height;
+  color: $text-base;
+  background: $bg-main;
+  text-rendering: geometricPrecision;
+  //
+}
+
+a {
+  transition: $g-transition;
+}
+
+#{$b}-font-alt {
+  font-family: $font-alt;
+}
+
+#{$b}-alt-bg {
+  background-color: $bg-alt;
+}
+
+#{$b}-tab {
+  &._active {
+    cursor: default;
+  }
+
+  &-content {
+    &:not(._active) {
+      display: none;
+    }
+  }
+}
+
+.hidden-body-y {
+  overflow-y: hidden;
+}

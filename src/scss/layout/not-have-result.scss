@@ -1,0 +1,42 @@
+.not-have-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mobile {
+    transform: translate(-50%, -0%);
+    z-index: 2;
+    background: $white-true;
+  }
+
+  &__title {
+    @include title(rem(32px),1.2);
+    margin-bottom: rem(32px);
+    text-align: center;
+
+    @include mobile {
+      font-size: rem(24px);
+    }
+  }
+
+  &__btn {
+    @include base-button(false,12px 28px,16px,6px);
+  }
+}
+
+.not-have-resul__title {
+  @include title(rem(40px), 1.4);
+  text-align: center;
+  padding: rem(20px) 0;
+
+  @include mobile {
+    font-size: rem(32px);
+  }
+}

@@ -1,0 +1,47 @@
+$b: '.section';
+
+#{$b} {
+  position: relative;
+
+  &__container-content {
+    max-width: rem(1040px);
+
+    &._small {
+      max-width: rem(944px);
+    }
+
+    &._center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: rem(56px);
+    line-height: rem(56px);
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: rem(40px);
+      line-height: rem(48px);
+    }
+  }
+
+  &__text {
+    font-size: rem(24px);
+    line-height: rem(32px);
+
+    @include mobile {
+      font-size: rem(20px);
+      line-height: rem(28px);
+    }
+  }
+
+  &__bg-container {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+  }
+}

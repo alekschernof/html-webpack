@@ -1,0 +1,55 @@
+$b: '.notification-label';
+
+#{$b} {
+  position: fixed;
+  top: 15%;
+  right: 0;
+  padding-top: rem(10px);
+  padding-bottom: rem(10px);
+  max-width: rem(350px);
+  border-radius: rem(8px) 0 0 rem(8px);
+  transform: translateX(100%);
+  pointer-events: none;
+  transition: transform 0.6s ease-in-out;
+
+  &.active {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  &.success {
+    background-color: $valid;
+
+    #{$b}__message {
+      color: $white-true;
+    }
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    padding-left: rem(15px);
+    padding-right: rem(15px);
+  }
+
+  &__message {
+    flex: 0 1 100%;
+    font-size: rem(18px);
+    line-height: rem(20px);
+    margin-right: rem(40px);
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    width: rem(36px);
+    height: rem(36px);
+
+    & .inline-svg-close-icon {
+      max-width: rem(24px);
+      max-height: rem(24px);
+    }
+  }
+}

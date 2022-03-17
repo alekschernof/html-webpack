@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+yarn.lock
+
+# Cache files and folders
+cache
+.eslintcache
+.stylelintcache
+
+/.eslintcache
+.eslintcache
+
+/.stylelintcache
+.stylelintcache
+
+# Dist folders
+/dist/
+dist
+dist/
+# VSCode
+.vscode
+
+# Intellij idea
+*.iml
+.idea
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride

@@ -1,0 +1,27 @@
+stages:
+  - deploy
+  - deploy_prod
+
+Deploy test:
+  stage: deploy
+  tags:
+    - nenaprasno_dev_runner
+  script:
+    - cd /var/www/nenaprasno/data/www/vse.nenaprasno.dev.vr.buroburo.tech/public/frontend && git reset --hard && git pull
+    - npm install && npm run build
+    - cd /var/www/nenaprasno/data/www/vse.nenaprasno.dev.vr.buroburo.tech && /opt/php74/bin/php bin/console cache:clear
+  only:
+    - develop
+
+Deploy prod:
+  stage: deploy_prod
+  tags:
+    - nenaprasno_prod_runner_our
+  script:
+    - cd /home/nenaprasno/vse.nenaprasno.ru/www/public/frontend && git checkout package-lock.json && git pull
+    - export LD_LIBRARY_PATH=/opt/zlib/1.2.11/lib:/usr/lib64:$LD_LIBRARY_PATH && npm install && npm run build
+    - cd ../.. && /usr/bin/php74 bin/console cache:clear
+  only:
+    - master
+    - /^hotfix.*$/
+    - /^release.*$/

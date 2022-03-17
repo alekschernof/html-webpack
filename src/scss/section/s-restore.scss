@@ -1,0 +1,22 @@
+$b: '.s-restore';
+
+#{$b} {
+  &__form-container {
+    max-width: rem(800px);
+    margin: 0 auto;
+  }
+
+  &__submit {
+    max-width: rem(320px);
+    min-width: rem(150px);
+    background: $accent-base;
+    color: $white-true;
+    border: 1px solid $accent-base;
+    border-radius: rem(10px);
+
+    &:hover {
+      background: transparent;
+      color: $accent-base;
+    }
+  }
+}

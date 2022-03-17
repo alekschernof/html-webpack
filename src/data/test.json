@@ -1,0 +1,1114 @@
+{
+  "test": [
+    {
+      "stepName": "Знакомство",
+      "contentBlocks": [
+        {
+          "blockName": "Знакомство",
+          "questions": [
+            {
+              "id": 43,
+              "sort": 10,
+              "name": "name",
+              "question_type": 2,
+              "question_wording": "Как вас зовут?"
+            },
+            {
+              "id": 44,
+              "sort": 20,
+              "name": "region",
+              "question_type": 2,
+              "question_wording": "В каком регионе вы живете?"
+            },
+            {
+              "id": 45,
+              "sort": 30,
+              "name": "dob",
+              "question_type": 2,
+              "question_wording": "Дата рождения"
+            },
+            {
+              "id": 46,
+              "sort": 40,
+              "name": "gender",
+              "question_type": 1,
+              "question_wording": "Ваш биологический пол",
+              "answers": [
+                {
+                  "id": 16,
+                  "answer_wording": "Мужской",
+                  "value": 1
+                },
+                {
+                  "id": 17,
+                  "answer_wording": "Женский",
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "id": 47,
+              "sort": 50,
+              "name": "height",
+              "question_type": 2,
+              "question_wording": "Рост, см"
+            },
+            {
+              "id": 48,
+              "sort": 60,
+              "name": "weight",
+              "question_type": 2,
+              "question_wording": "Вес, кг"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stepName": "Образ жизни",
+      "contentBlocks": [
+        {
+          "blockName": "Питание и спорт",
+          "questions": [
+            {
+              "id": 4,
+              "sort": 70,
+              "name": "vegetables",
+              "question_type": 3,
+              "question_wording": "Как часто вы употребляете в пищу фрукты, овощи и зелень?",
+              "answers": [
+                {
+                  "id": 1,
+                  "answer_wording": "1 раз в неделю или реже",
+                  "value": 1
+                },
+                {
+                  "id": 2,
+                  "answer_wording": "2-3 раза в неделю",
+                  "value": 2
+                },
+                {
+                  "id": 3,
+                  "answer_wording": "Ежедневно, меньше 5 порций в день",
+                  "value": 3
+                },
+                {
+                  "id": 4,
+                  "answer_wording": "Ежедневно, не менее 5 порций в день",
+                  "value": 4
+                }
+              ],
+              "explanation": "Одна порция подразумевает один целый фрукт/овощ или 125 грамм чистого продукта"
+            },
+            {
+              "id": 5,
+              "sort": 80,
+              "name": "meat",
+              "question_type": 3,
+              "question_wording": "Как часто вы употребляете в пищу красное мясо и переработанное мясо?",
+              "answers": [
+                {
+                  "id": 5,
+                  "answer_wording": "Не употребляю вообще",
+                  "value": 1
+                },
+                {
+                  "id": 6,
+                  "answer_wording": "Почти не употребляю",
+                  "value": 2
+                },
+                {
+                  "id": 7,
+                  "answer_wording": "1-2 раза в неделю",
+                  "value": 3
+                },
+                {
+                  "id": 8,
+                  "answer_wording": "Практически ежедневно",
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "id": 9,
+              "sort": 100,
+              "name": "alcohol",
+              "question_type": 3,
+              "question_wording": "Как часто употребляете алкоголь?",
+              "answers": [
+                {
+                  "id": 12,
+                  "answer_wording": "Не употребляю вообще",
+                  "value": 1
+                },
+                {
+                  "id": 13,
+                  "answer_wording": "Почти не употребляю",
+                  "value": 2
+                },
+                {
+                  "id": 14,
+                  "answer_wording": "1-2 раза в неделю",
+                  "value": 3
+                },
+                {
+                  "id": 15,
+                  "answer_wording": "Практически ежедневно",
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "id": 50,
+              "sort": 110,
+              "name": "steps",
+              "question_type": 3,
+              "question_wording": "Какое количество шагов вы проходите ежедневно?",
+              "answers": [
+                {
+                  "id": 40,
+                  "answer_wording": "< 3000",
+                  "value": 1
+                },
+                {
+                  "id": 41,
+                  "answer_wording": "3000-5000",
+                  "value": 2
+                },
+                {
+                  "id": 42,
+                  "answer_wording": "5000-7000",
+                  "value": 3
+                },
+                {
+                  "id": 43,
+                  "answer_wording": "7000-10000",
+                  "value": 4
+                },
+                {
+                  "id": 44,
+                  "answer_wording": ">10000",
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockName": "Курение",
+          "questions": [
+            {
+              "id": 6,
+              "sort": 120,
+              "name": "smoking",
+              "question_type": 1,
+              "question_wording": "Укажите, пожалуйста, ваш статус курения",
+              "answers": [
+                {
+                  "id": 9,
+                  "answer_wording": "Курю в настоящий момент",
+                  "value": 1,
+                  "child_questions": [
+                    {
+                      "id": 8,
+                      "sort": 160,
+                      "name": "yearsSmoking",
+                      "question_type": 2,
+                      "question_wording": "Сколько лет вы курите?",
+                      "explanation": "С учетом Вашего ответа на предыдущий вопрос, нам необходимо рассчитать индекс, который называется «пачка/лет». Укажите, пожалуйста, в свободных полях среднее количество сигарет, которое вы выкуривали в день, и в течение какого времени"
+                    },
+                    {
+                      "id": 7,
+                      "sort": 170,
+                      "name": "cigarettesDay",
+                      "question_type": 2,
+                      "question_wording": "Сколько сигарет в день вы выкуриваете?"
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "answer_wording": "Никогда не курил (а)",
+                  "value": 2
+                },
+                {
+                  "id": 11,
+                  "answer_wording": "Раньше курил (а), сейчас бросил (а)",
+                  "value": 3,
+                  "child_questions": [
+                    {
+                      "id": 51,
+                      "sort": 130,
+                      "name": "yearsQuitSmoking",
+                      "question_type": 2,
+                      "question_wording": "Сколько полных лет назад бросили?",
+                      "explanation": "С учетом Вашего ответа на предыдущий вопрос, нам необходимо рассчитать индекс, который называется «пачка/лет». Укажите, пожалуйста, в свободных полях среднее количество сигарет, которое вы выкуривали в день, и в течение какого времени"
+                    },
+                    {
+                      "id": 52,
+                      "sort": 140,
+                      "name": "yearsSmoked",
+                      "question_type": 2,
+                      "question_wording": "Сколько лет курили до этого?"
+                    },
+                    {
+                      "id": 53,
+                      "sort": 150,
+                      "name": "cigarettesDaySmoked",
+                      "question_type": 2,
+                      "question_wording": "По сколько сигарет в день?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockName": "Солнце и загар",
+          "questions": [
+            {
+              "id": 13,
+              "sort": 180,
+              "name": "sun",
+              "question_type": 5,
+              "question_wording": "Пользуетесь ли вы солнцезащитными средствами во время пребывания на солнце?",
+              "answers": [
+                {
+                  "id": 27,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 28,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 14,
+              "sort": 190,
+              "name": "solarium",
+              "question_type": 5,
+              "question_wording": "Посещаете ли вы солярий?",
+              "answers": [
+                {
+                  "id": 81,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 82,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockName": "Половая жизнь",
+          "questions": [
+            {
+              "id": 15,
+              "sort": 200,
+              "name": "sexualLife",
+              "question_type": 5,
+              "question_wording": "Ведете ли вы половую жизнь?",
+              "answers": [
+                {
+                  "id": 83,
+                  "answer_wording": "Да",
+                  "value": 1,
+                  "child_questions": [
+                    {
+                      "id": 16,
+                      "sort": 210,
+                      "name": "beginningSexualLife",
+                      "question_type": 2,
+                      "question_wording": "С какого возраста вы ведёте половую жизнь?"
+                    },
+                    {
+                      "id": 17,
+                      "sort": 220,
+                      "name": "numberPartners",
+                      "question_type": 2,
+                      "question_wording": "Укажите, пожалуйста, число половых партнеров"
+                    }
+                  ]
+                },
+                {
+                  "id": 84,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stepName": "История",
+      "contentBlocks": [
+        {
+          "blockName": "Кожа",
+          "questions": [
+            {
+              "id": 72,
+              "sort": 230,
+              "name": "hairСolor",
+              "question_type": 3,
+              "question_wording": "Какой ваш натуральный цвет волос?",
+              "answers": [
+                {
+                  "id": 77,
+                  "answer_wording": "Рыжий",
+                  "value": 1
+                },
+                {
+                  "id": 78,
+                  "answer_wording": "Светлый",
+                  "value": 2
+                },
+                {
+                  "id": 79,
+                  "answer_wording": "Русый",
+                  "value": 3
+                },
+                {
+                  "id": 80,
+                  "answer_wording": "Темный",
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "sort": 240,
+              "name": "birthmarks",
+              "question_type": 6,
+              "question_wording": "Как много родинок у вас на коже? Выберите наиболее подходящий вариант",
+              "answers": [
+                {
+                  "id": 18,
+                  "answer_wording": "Нет родинок",
+                  "value": 1
+                },
+                {
+                  "id": 19,
+                  "answer_wording": "Несколько",
+                  "value": 2
+                },
+                {
+                  "id": 20,
+                  "answer_wording": "Немного",
+                  "value": 3
+                },
+                {
+                  "id": 21,
+                  "answer_wording": "Много",
+                  "value": 4
+                }
+              ],
+              "explanation": "Выберите наиболее подходящий вариант"
+            },
+            {
+              "id": 12,
+              "sort": 250,
+              "name": "formation",
+              "question_type": 4,
+              "question_wording": "Есть ли у вас образование на коже, которое отвечает одному из нижеперечисленных признаков:",
+              "answers": [
+                {
+                  "id": 22,
+                  "answer_wording": "Асимметричное - если мысленно провести черту через центр образования, то она делит очаг на д",
+                  "value": 1
+                },
+                {
+                  "id": 23,
+                  "answer_wording": "Имеет нечеткий изрезанный край",
+                  "value": 2
+                },
+                {
+                  "id": 24,
+                  "answer_wording": "Неравномерная окраска",
+                  "value": 3
+                },
+                {
+                  "id": 25,
+                  "answer_wording": "Имеет размеры более 6 мм",
+                  "value": 4
+                },
+                {
+                  "id": 26,
+                  "answer_wording": "Изменило свой цвет, форму, размер с течением времени",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "id": 54,
+              "sort": 260,
+              "name": "sunburnUp18",
+              "question_type": 5,
+              "question_wording": "Были ли у Вас солнечные ожоги в возрасте до 18 лет (болезненное интенсивное покраснение, длящееся 2 и более дней)?",
+              "answers": [
+                {
+                  "id": 85,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 86,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockName": "Наблюдение и лечение",
+          "questions": [
+            {
+              "id": 55,
+              "sort": 270,
+              "name": "vpch",
+              "question_type": 5,
+              "question_wording": "Проходили ли Вы вакцинацию от вируса папилломы человека (ВПЧ)?",
+              "answers": [
+                {
+                  "id": 87,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 88,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 24,
+              "sort": 280,
+              "name": "intestine",
+              "question_type": 5,
+              "question_wording": "Диагностировали ли вам воспалительные заболевания кишечника? (язвенный колит либо болезнь Крона)",
+              "answers": [
+                {
+                  "id": 89,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 90,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 56,
+              "sort": 290,
+              "name": "radiationTherapy",
+              "question_type": 5,
+              "question_wording": "Была ли Вам проведена лучевая терапия на органы брюшной полости в детском возрасте (например, в связи с онкологическим заболеванием в детстве)?",
+              "answers": [
+                {
+                  "id": 91,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 92,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 22,
+              "sort": 300,
+              "name": "hysterectomy",
+              "question_type": 5,
+              "question_wording": "Была ли Вам проведена гистерэктомия (операция по удалению матки с шейкой матки)?",
+              "answers": [
+                {
+                  "id": 93,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 94,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 57,
+              "sort": 310,
+              "name": "vaginalDischarge",
+              "question_type": 5,
+              "question_wording": "Есть ли у вас следующие симптомы (ответьте «да», если у вас есть хотя бы один из них): кровянистые выделения из влагалища вне менструаций (после полового акта или вне его), кровянистые выделения в менопаузе, боли в области влагалища и в малом тазу, отдающие в ногу и/или поясницу, выделения из влагалища с неприятным запахом:",
+              "answers": [
+                {
+                  "id": 95,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 96,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 58,
+              "sort": 320,
+              "name": "bloodPsa",
+              "question_type": 5,
+              "question_wording": "Сдавали ли Вы когда-нибудь анализ крови на общий ПСА?",
+              "answers": [
+                {
+                  "id": 97,
+                  "answer_wording": "Да",
+                  "value": 1,
+                  "child_questions": [
+                    {
+                      "id": 74,
+                      "sort": 321,
+                      "name": "bloodPsaIndicator",
+                      "question_type": 3,
+                      "question_wording": "Укажите, пожалуйста показатель ПСА",
+                      "answers": [
+                        {
+                          "id": 135,
+                          "answer_wording": "Меньше 3",
+                          "value": 1
+                        },
+                        {
+                          "id": 136,
+                          "answer_wording": "3,0 - 9,9",
+                          "value": 2,
+                          "child_questions": [
+                            {
+                              "id": 84,
+                              "sort": 322,
+                              "name": "psaMultiparameterMRT",
+                              "question_type": 5,
+                              "question_wording": "Выполняли ли Вы ранее мультипараметрическую МРТ?",
+                              "answers": [
+                                {
+                                  "id": 139,
+                                  "answer_wording": "Да",
+                                  "value": 1,
+                                  "child_questions": [
+                                    {
+                                      "id": 87,
+                                      "sort": 323,
+                                      "name": "psaMultiparameterMRTPirad",
+                                      "question_type": 3,
+                                      "question_wording": "Укажите, пожалуйста, значение PIRADSv2 по мпМРТ (если указано)",
+                                      "answers": [
+                                        {
+                                          "id": 145,
+                                          "answer_wording": "1-2",
+                                          "value": 1
+                                        },
+                                        {
+                                          "id": 146,
+                                          "answer_wording": "3-5",
+                                          "value": 2
+                                        },
+                                        {
+                                          "id": 147,
+                                          "answer_wording": "Не выбрано",
+                                          "value": 0
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": 140,
+                                  "answer_wording": "Нет",
+                                  "value": 0
+                                }
+                              ]
+                            },
+                            {
+                              "id": 85,
+                              "sort": 324,
+                              "name": "psaProstateHealthIndex",
+                              "question_type": 5,
+                              "question_wording": "Делали ли Вы определение индекса здоровья простаты (ИЗП, PHI)?",
+                              "answers": [
+                                {
+                                  "id": 141,
+                                  "answer_wording": "Да",
+                                  "value": 1,
+                                  "child_questions": [
+                                    {
+                                      "id": 88,
+                                      "sort": 325,
+                                      "name": "psaProstateHealthResultingFigure",
+                                      "question_type": 3,
+                                      "question_wording": "Укажите, пожалуйста, полученный показатель ИЗП/PHI",
+                                      "answers": [
+                                        {
+                                          "id": 148,
+                                          "answer_wording": "0-34",
+                                          "value": 1
+                                        },
+                                        {
+                                          "id": 149,
+                                          "answer_wording": "35 и более",
+                                          "value": 2
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": 142,
+                                  "answer_wording": "Нет",
+                                  "value": 0
+                                }
+                              ]
+                            },
+                            {
+                              "id": 86,
+                              "sort": 326,
+                              "name": "psaHaveTestTotalFree",
+                              "question_type": 5,
+                              "question_wording": "Есть ли у вас на руках анализ с уровнем общего ПСА и свободного ПСА?",
+                              "answers": [
+                                {
+                                  "id": 143,
+                                  "answer_wording": "Да",
+                                  "value": 1,
+                                  "child_questions": [
+                                    {
+                                      "id": 89,
+                                      "sort": 327,
+                                      "name": "psaTotalPsa",
+                                      "question_type": 2,
+                                      "question_wording": "Общий ПСА"
+                                    },
+                                    {
+                                      "id": 90,
+                                      "sort": 328,
+                                      "name": "psaFreePsa",
+                                      "question_type": 2,
+                                      "question_wording": "Свободный ПСА"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": 144,
+                                  "answer_wording": "Нет",
+                                  "value": 0
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": 137,
+                          "answer_wording": "10,0 - 19,9",
+                          "value": 3
+                        },
+                        {
+                          "id": 138,
+                          "answer_wording": "Больше 20",
+                          "value": 4
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 98,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 73,
+              "sort": 330,
+              "name": "urinaryProblems",
+              "question_type": 5,
+              "question_wording": "Есть ли у вас следующие симптомы: появление крови в моче или сперме, нарушения мочеиспускания (затруднения при мочеиспускании или, наборот, недержание мочи)?",
+              "answers": [
+                {
+                  "id": 99,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 100,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stepName": "Семья",
+      "contentBlocks": [
+        {
+          "blockName": "Случаи заболеваний в семье",
+          "questions": [
+            {
+              "id": 28,
+              "sort": 340,
+              "name": "oncologicalDisease",
+              "question_type": 0,
+              "question_wording": "Были ли у ваших родственников 1 и 2 степени родства выявлены какие-либо онкологические заболевания (злокачественные опухоли)?"
+            },
+            {
+              "id": 33,
+              "sort": 350,
+              "name": "breastCancer",
+              "question_type": 5,
+              "question_wording": "Рак молочной железы",
+              "answers": [
+                {
+                  "id": 101,
+                  "answer_wording": "Да",
+                  "value": 1,
+                  "child_questions": [
+                    {
+                      "id": 75,
+                      "sort": 352,
+                      "name": "breastDo2OrMoreRelatives",
+                      "question_type": 5,
+                      "question_wording": "У 2 и более родственников 1 и 2 родства?",
+                      "answers": [
+                        {
+                          "id": 117,
+                          "answer_wording": "Да",
+                          "value": 1
+                        },
+                        {
+                          "id": 118,
+                          "answer_wording": "Нет",
+                          "value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": 76,
+                      "sort": 354,
+                      "name": "breastUnderTheAgeOf45",
+                      "question_type": 5,
+                      "question_wording": "В возрасте моложе 45 лет?",
+                      "answers": [
+                        {
+                          "id": 119,
+                          "answer_wording": "Да",
+                          "value": 1
+                        },
+                        {
+                          "id": 120,
+                          "answer_wording": "Нет",
+                          "value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": 77,
+                      "sort": 356,
+                      "name": "breastCancerInMen",
+                      "question_type": 5,
+                      "question_wording": "Случаи рака у молочной железы у мужчин?",
+                      "answers": [
+                        {
+                          "id": 121,
+                          "answer_wording": "Да",
+                          "value": 1
+                        },
+                        {
+                          "id": 122,
+                          "answer_wording": "Нет",
+                          "value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": 78,
+                      "sort": 358,
+                      "name": "casesOfCancerInBothBreasts",
+                      "question_type": 5,
+                      "question_wording": "Случаи рака обеих молочных желёз?",
+                      "answers": [
+                        {
+                          "id": 123,
+                          "answer_wording": "Да",
+                          "value": 1
+                        },
+                        {
+                          "id": 124,
+                          "answer_wording": "Нет",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 102,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 31,
+              "sort": 360,
+              "name": "melanoma",
+              "question_type": 5,
+              "question_wording": "Меланома кожи",
+              "answers": [
+                {
+                  "id": 103,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 104,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 32,
+              "sort": 370,
+              "name": "ovarianCancer",
+              "question_type": 5,
+              "question_wording": "Рак яичников",
+              "answers": [
+                {
+                  "id": 105,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 106,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 67,
+              "sort": 380,
+              "name": "colorectalCancer",
+              "question_type": 5,
+              "question_wording": "Колоректальный рак",
+              "answers": [
+                {
+                  "id": 107,
+                  "answer_wording": "Да",
+                  "value": 1,
+                  "child_questions": [
+                    {
+                      "id": 79,
+                      "sort": 383,
+                      "name": "colocteralDo2OrMoreRelatives",
+                      "question_type": 5,
+                      "question_wording": "У 2 и более родственников 1 и 2 родства?",
+                      "answers": [
+                        {
+                          "id": 125,
+                          "answer_wording": "Да",
+                          "value": 1
+                        },
+                        {
+                          "id": 126,
+                          "answer_wording": "Нет",
+                          "value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": 80,
+                      "sort": 387,
+                      "name": "colocteralUnderTheAgeOf50",
+                      "question_type": 5,
+                      "question_wording": "В возрасте моложе 50 лет?",
+                      "answers": [
+                        {
+                          "id": 127,
+                          "answer_wording": "Да",
+                          "value": 1
+                        },
+                        {
+                          "id": 128,
+                          "answer_wording": "Нет",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 108,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 68,
+              "sort": 390,
+              "name": "pancreaticCancer",
+              "question_type": 5,
+              "question_wording": "Рак поджелудочной железы",
+              "answers": [
+                {
+                  "id": 109,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 110,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 37,
+              "sort": 400,
+              "name": "kidneyCancer",
+              "question_type": 5,
+              "question_wording": "Рак почки",
+              "answers": [
+                {
+                  "id": 111,
+                  "answer_wording": "Да",
+                  "value": 1,
+                  "child_questions": [
+                    {
+                      "id": 81,
+                      "sort": 405,
+                      "name": "kidneyUnderTheAgeOf50",
+                      "question_type": 5,
+                      "question_wording": "В возрасте моложе 50 лет?",
+                      "answers": [
+                        {
+                          "id": 129,
+                          "answer_wording": "Да",
+                          "value": 1
+                        },
+                        {
+                          "id": 130,
+                          "answer_wording": "Нет",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 112,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 41,
+              "sort": 410,
+              "name": "prostateCancer",
+              "question_type": 5,
+              "question_wording": "Рак предстательной железы",
+              "answers": [
+                {
+                  "id": 113,
+                  "answer_wording": "Да",
+                  "value": 1,
+                  "child_questions": [
+                    {
+                      "id": 82,
+                      "sort": 413,
+                      "name": "prostateDo2OrMoreRelatives",
+                      "question_type": 5,
+                      "question_wording": "У 2 и более родственников 1 и 2 родства?",
+                      "answers": [
+                        {
+                          "id": 131,
+                          "answer_wording": "Да",
+                          "value": 1
+                        },
+                        {
+                          "id": 132,
+                          "answer_wording": "Нет",
+                          "value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": 83,
+                      "sort": 417,
+                      "name": "prostateUnderTheAgeOf50",
+                      "question_type": 5,
+                      "question_wording": "В возрасте моложе 50 лет?",
+                      "answers": [
+                        {
+                          "id": 133,
+                          "answer_wording": "Да",
+                          "value": 1
+                        },
+                        {
+                          "id": 134,
+                          "answer_wording": "Нет",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 114,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "id": 69,
+              "sort": 420,
+              "name": "endometrialCancer",
+              "question_type": 5,
+              "question_wording": "Рак тела матки (рак эндометрия)",
+              "answers": [
+                {
+                  "id": 115,
+                  "answer_wording": "Да",
+                  "value": 1
+                },
+                {
+                  "id": 116,
+                  "answer_wording": "Нет",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

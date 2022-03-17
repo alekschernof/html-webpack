@@ -1,0 +1,151 @@
+$b: '.s-top-navigation';
+
+#{$b} {
+  background: $bg-main;
+  
+  &__container {
+    min-height: rem(90px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include mobile {
+      min-height: rem(50px);
+    }
+  }
+
+  &__burger-container {
+    position: relative;
+    pointer-events: none;
+    width: rem(24px);
+    height: rem(12px);
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 2px;
+      background-color: $accent-base;
+    }
+
+    &::after {
+      width: 100%;
+      max-width: rem(16px);
+      bottom: 0;
+    }
+
+    &::before {
+      width: 100%;
+      top: 0;
+    }
+
+    @include tablet-min {
+      display: none;
+    }
+
+    @include mobile {
+      display: block;
+      pointer-events: auto;
+    }
+  }
+
+  &__burger-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: rem(20px);
+    height: 2px;
+    background-color: $accent-base;
+    transition: all 0.3s;
+    right: 0;
+  }
+
+  &__close-menu {
+    display: none;
+    position: absolute;
+    width: rem(24px);
+    height: rem(24px);
+    cursor: pointer;
+    top: rem(12px);
+    right: rem(12px);
+
+    @include mobile {
+      display: block;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 2px;
+      background-color: $accent-base;
+      width: 100%;
+    }
+
+    &::after {
+      top: 50%;
+      bottom: auto;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
+  &__links-list {
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+
+    @include mobile {
+      padding: rem(44px) rem(14px);
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white-true;
+      z-index: 3;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.3s ease-out;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      &.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &__link-anchor {
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    margin-right: rem(40px);
+
+    @include mobile {
+      margin-right: 0;
+      font-size: rem(18px);
+      line-height: rem(20px);
+      margin-bottom: rem(22px);
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

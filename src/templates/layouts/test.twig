@@ -1,0 +1,16 @@
+{% import "includes/_includes.twig" as inc %}
+<!DOCTYPE html>
+<html lang="ru"{% if pageClass %} class="{{ pageClass }}"{% endif %}>
+{% include 'modules/head.twig' %}
+<body>
+<div class="l-page another-bg">
+    {% include "modules/site-preloader.twig" %}
+    <div class="l-page-layout">
+        {% include "modules/site-short-header.twig" %}
+        <main class="l-main">
+            {% block content %}{% endblock %}
+        </main>
+        {% include "modules/site-short-footer.twig" %}
+    </div>
+</div>
+</body>

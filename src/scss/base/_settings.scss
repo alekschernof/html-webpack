@@ -1,0 +1,88 @@
+// Size
+$outer-w: 1440px;
+$inner-pd: 152px;
+$inner-pd-ld: 152px;
+$inner-pd-tab: 152px;
+$inner-pd-mob: 26px;
+
+// Colors
+$black-true: #000;
+$white-true: #fff;
+
+// UI Colors
+$transparent: rgba(0, 0, 0, 0.001);
+$color-base: $white-true;
+$accent-base: #5e50f8;
+$action-base: #f42f3e;
+$text-base: $black-true;
+$border-base: #e6ecf2;
+$link-base: #1964b1;
+$shadow-base: rgba(0, 0, 0, 0.04);
+$shadow-second: rgba(0, 0, 0, 0.1);
+$shadow-progress-donate: rgba(120, 22, 244, 0.2);
+$site-preloader-inner: $accent-base;
+$site-preloader-bg: $white-true;
+$yelow-color:#ffd46d;
+$border-grey:#b3b4c8;
+$text-gray: #82839b;
+$text-gray2: #9b9ba5;
+$infiniteLine: #f1f1f6;
+$border-faq: #e6e6ef;
+$border-header-bottom: rgba(21, 24, 51, 0.06);
+$border-top-navigation: rgba(21, 24, 51, 0.08);
+$border-footer-card: rgba(21, 24, 51, 0.12);
+$bg-header-donut: linear-gradient(87.88deg, #51a6fc 0%, #ad5cf8 100%);
+$text-note: rgba(239, 7, 243, 0.2);
+$active-header-link: #22355a;
+$header-screen: #2ccc7e;
+$header-onko: #556ef4;
+$header-media: #fb4e42;
+$header-ask: #7d07f3;
+$sum-start: #0480fa;
+$sum-end: #ef07f3;
+$progress-donate: linear-gradient(90deg, #0480fa 0%, #ef07f3 170.21%);
+$error-color: #737780;
+$success-color: $accent-base;
+$border-footer: #ebebf0;
+$header-popup-border: #dadada;
+$header-popup-shadow: rgba(34, 60, 80, 0.16);
+$invalid: #f44336;
+$valid: #259238;
+$loading: $accent-base;
+
+// Backgrounds
+$bg-main: #fcfcfc;
+$bg-alt: #f2f2f2;
+$bg-footer: #ccc;
+$bg-header-nav: rgba(10, 32, 226, 0.08);
+$bg-header:#cae9fc;
+
+$li-bg: #f2f9fc;
+
+// Fonts
+$font-base: 'Gilroy';
+$font-alt: 'Muller';
+$font-header: 'Roboto';
+$font-size: 16px;
+$line-height: 1.33;
+$font-family-base: $font-base, arial, helvetica, sans-serif;
+$font-family-alt: $font-alt, arial, helvetica, sans-serif;
+$font-family-header: $font-header, arial, helvetica, sans-serif;
+
+// Transition
+$g-transition-duration: 0.25s;
+$g-transition-easing: ease-out;
+$g-transition: all $g-transition-duration $g-transition-easing;
+$transition-easing-alt: cubic-bezier(0.77, 0, 0.19, 1);
+
+// Screen sizes
+$wide-desktop-width: 1441px;
+$desktop-width: 1440px;
+$low-desktop-width: 1024px;
+$tablet-width: 768px;
+
+// Rem
+$root-font-size: 100;
+
+// Paths
+$image-path: '../frontend/dist/img/';

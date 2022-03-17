@@ -1,0 +1,224 @@
+$b: '.site-footer';
+
+#{$b} {
+  padding-bottom: rem(74px);
+
+  @include mobile {
+    padding-bottom: rem(33px);
+  }
+
+  &__container {
+    padding-left: rem(85px);
+    padding-right: rem(85px);
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile {
+      padding-left: $inner-pd-mob;
+      padding-right: $inner-pd-mob;
+    }
+  }
+
+  &__logo-link {
+    display: block;
+    margin: 0 auto rem(32px) auto;
+  }
+
+  &__logo {
+    width: rem(139px);
+    height: auto;
+  }
+
+  &__fund-projects {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-bottom: rem(36px);
+  }
+
+  &__slider-arrow {
+    user-select: none;
+    cursor: pointer;
+    flex: 0 0 auto;
+    width: rem(24px);
+    height: rem(24px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $transparent;
+
+    & .inline-svg-arrow-navigation {
+      max-width: rem(14px);
+    }
+
+    &.swiper-button-prev {
+      margin-right: rem(24px);
+    }
+
+    &.swiper-button-next {
+      margin-left: rem(24px);
+
+      & .inline-svg-arrow-navigation {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__project-card {
+    padding: 0 rem(8px);
+    display: flex;
+    height: auto;
+  }
+
+  &__project-link {
+    width: 100%;
+    display: flex;
+    padding: rem(16px);
+    border-radius: rem(8px);
+    border: 1px solid $border-footer-card;
+    justify-content: flex-start;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__project-text {
+    font-size: rem(12px);
+    line-height: rem(16px);
+    opacity: 0.6;
+    flex-grow: 1;
+    min-width: rem(1px);
+
+    @include mobile {
+      order: 1;
+    }
+  }
+
+  &__project-logo {
+    display: block;
+    flex-shrink: 0;
+    margin-left: rem(10px);
+
+    @include mobile {
+      margin-left: 0;
+      margin-bottom: rem(12px);
+    }
+
+    &.screen {
+      width: rem(71px);
+
+      @include mobile {
+        width: rem(48px);
+      }
+    }
+
+    &.profilacticaMedia {
+      width: rem(175px);
+
+      @include mobile {
+        width: rem(120px);
+      }
+    }
+
+    &.prostoSprosit {
+      width: rem(117px);
+
+      @include mobile {
+        width: rem(80px);
+      }
+    }
+
+    &.onko {
+      width: rem(123px);
+
+      & .inline-svg-logo-onko {
+        max-height: rem(25px);
+      }
+
+      @include mobile {
+        width: rem(85px);
+      }
+    }
+  }
+
+  &__service-information {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: rem(14px);
+    line-height: rem(20px);
+
+    @include mobile {
+      flex-wrap: wrap;
+      font-size: rem(12px);
+    }
+  }
+
+  &__copyright {
+    opacity: 0.6;
+
+    @include mobile {
+      margin-top: rem(10px);
+    }
+  }
+
+  &__termsUse {
+    font-weight: 600;
+    font-size: rem(14px);
+    position: relative;
+
+    @include mobile {
+      font-size: rem(12px);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: rem(2px);
+      background-color: $text-base;
+      transition: $g-transition;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__sponsor-card {
+    display: flex;
+    font-size: rem(12px);
+    line-height: rem(16px);
+
+    @include mobile {
+      margin-bottom: rem(24px);
+    }
+  }
+
+  &__sponsor-logo {
+    width: rem(40px);
+    margin-right: rem(12px);
+
+    @include aspect-ratio(40, 32);
+
+    @include mobile {
+      margin-right: rem(10px);
+    }
+  }
+
+  &__sponsor-disclaimer {
+    width: 100%;
+  }
+
+  &__sponsor-name {
+    width: 100%;
+    font-weight: bold;
+  }
+}

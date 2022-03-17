@@ -1,0 +1,35 @@
+// paths relative to bundle app.css
+@include font-face('IBM', '../fonts/IBMPlexSans/IBMPlexSans/IBMPlexSans', 400, normal);
+@include font-face('IBM', '../fonts/IBMPlexSans/IBMPlexSans-SemiBold/IBMPlexSans-SemiBold', 600, normal);
+@include font-face('Muller', '../fonts/MullerRegular/MullerRegular', 400, normal);
+// Gilroy font
+@include font-face('Gilroy', '../fonts/gilroy/Gilroy-UltraLight', 200, normal);
+@include font-face('Gilroy', '../fonts/gilroy/Gilroy-SemiBold', 600, normal);
+@include font-face('Gilroy', '../fonts/gilroy/Gilroy-Regular', 400, normal);
+@include font-face('Gilroy', '../fonts/gilroy/Gilroy-Bold', 700, normal);
+@include font-face('Gilroy', '../fonts/gilroy/Gilroy-Heavy', 900, normal);
+@include font-face('Gilroy', '../fonts/gilroy/Gilroy-Thin', 100, normal);
+@include font-face('Gilroy', '../fonts/gilroy/Gilroy-Medium', 500, normal);
+//Roboto font
+@include font-face('Roboto', '../fonts/roboto/Roboto-Black', 900, normal);
+@include font-face('Roboto', '../fonts/roboto/Roboto-Bold', 700, normal);
+@include font-face('Roboto', '../fonts/roboto/Roboto-BlackItalic', 900, italic);
+@include font-face('Roboto', '../fonts/roboto/Roboto-LightItalic', 300, italic);
+@include font-face('Roboto', '../fonts/roboto/Roboto-Light', 300, normal);
+@include font-face('Roboto', '../fonts/roboto/Roboto-Medium', 500, normal);
+@include font-face('Roboto', '../fonts/roboto/Roboto-BoldItalic', 700, italic);
+@include font-face('Roboto', '../fonts/roboto/Roboto-Italic', 400, normal);
+@include font-face('Roboto', '../fonts/roboto/Roboto-Thin', 100, normal);
+@include font-face('Roboto', '../fonts/roboto/Roboto-Regular', 400, normal);
+@include font-face('Roboto', '../fonts/roboto/Roboto-MediumItalic', 500, italic);
+@include font-face('Roboto', '../fonts/roboto/Roboto-ThinItalic', 100, italic);
+
+// 100  Thin (Hairline)
+// 200  Extra Light (Ultra Light)
+// 300  Light
+// 400  Normal (Regular)
+// 500  Medium
+// 600  Semi Bold (Demi Bold)
+// 700  Bold
+// 800  Extra Bold (Ultra Bold)
+// 900  Black (Heavy)

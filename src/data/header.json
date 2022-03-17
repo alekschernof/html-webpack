@@ -1,0 +1,57 @@
+{
+  "info": {
+    "auth": true,
+    "name": "Владислав Рождественский",
+    "avatar": "../img/avatar.svg",
+    "projectItem": [
+      {
+        "active": true,
+        "name": "Все не напрасно",
+        "link": "/",
+        "classService": "_vnn"
+      },
+      {
+        "active": false,
+        "name": "Скрин",
+        "link": "https://screen.nenaprasno.ru/index.html",
+        "classService": "_screen"
+      },
+      {
+        "active": false,
+        "name": "Просто спросить",
+        "link": "https://ask.nenaprasno.ru/",
+        "classService": "_ask"
+      },
+      {
+        "active": false,
+        "name": "Онко Вики",
+        "link": "https://onko-wiki.dev.vr.buroburo.tech/",
+        "classService": "_onko"
+      },
+      {
+        "active": false,
+        "name": "Профилактика.Медиа",
+        "link": "https://media.nenaprasno.ru/",
+        "classService": "_media"
+      }
+    ],
+    "menuItem": [
+      {
+        "name": "О раке груди",
+        "anchor": "/"
+      },
+      {
+        "name": "Партнеры",
+        "anchor": "#publicationsList"
+      },
+      {
+        "name": "Помочь проекту",
+        "anchor": "#donutsForm"
+      },
+      {
+        "name": "Контакты",
+        "anchor": "#"
+      }
+    ]
+  }
+}

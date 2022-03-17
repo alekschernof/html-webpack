@@ -1,0 +1,76 @@
+$b: '.button';
+
+#{$b} {
+  @include clickable();
+  @include truncate-text();
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  min-width: rem(229px);
+  height: rem(48px);
+  line-height: rem(48px);
+  padding: 0 rem(25px);
+  border-radius: rem(5px);
+  font-weight: bold;
+  font-size: rem(14px);
+  text-align: center;
+  text-transform: uppercase;
+  color: $white-true;
+  background-color: $accent-base;
+  outline: none;
+  border: none;
+  touch-action: manipulation;
+  transition-property: opacity, visibility, background, color, box-shadow, border;
+  transition-duration: $g-transition-duration;
+  transition-timing-function: $g-transition-easing;
+
+  &:hover {
+    background-color: darken($accent-base, 10);
+  }
+
+  &:disabled,
+  &._disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &._loading {
+    @include hide-text();
+
+    // for multiline
+    #{$b}__text {
+      opacity: 0;
+    }
+
+    &::after {
+      @include spinner(20px, 2px, currentColor);
+      content: '';
+    }
+  }
+
+  &._full-width {
+    width: 100%;
+    max-width: none;
+  }
+
+  &._multiline {
+    height: auto;
+    min-height: rem(48px);
+    white-space: normal;
+    line-height: 1;
+    padding-top: rem(17px);
+    padding-bottom: rem(17px);
+  }
+
+  &._outline {
+    color: $accent-base;
+    background-color: $white-true;
+    box-shadow: inset 0 0 0 1px $accent-base;
+
+    &:hover {
+      color: $white-true;
+      background-color: $accent-base;
+    }
+  }
+}

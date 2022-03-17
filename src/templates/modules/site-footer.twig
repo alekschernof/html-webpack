@@ -1,0 +1,41 @@
+{% includeData 'footer.json' as data %}
+<footer class="site-footer l-footer">
+    <div class="site-footer__container l-outer-width">
+        <a href="/" class="site-footer__logo-link">
+            <img src="../img/logo.png" alt="лого" class="site-footer__logo">
+        </a>
+        <div class="site-footer__fund-projects js-projects-slider">
+            <div class="site-footer__slider-arrow swiper-button-prev">
+                {{ inc.inlineSvg('arrow-navigation', '../static/img/icon/black-arrow-left.svg') }}
+            </div>
+            <div class="site-footer__projects-slider swiper">
+                <div class="site-footer__slider-wrapper swiper-wrapper">
+                    {% for i in data.projectsFund %}
+                        <div class="site-footer__project-card swiper-slide">
+                            <a class="site-footer__project-link" href="{{ i.link }}">
+                                <p class="site-footer__project-text">{{ i.text }}</p>
+                                <div class="site-footer__project-logo {% if loop.index0 == 0 %}screen{% elseif loop.index0 == 1 %}profilacticaMedia{% elseif loop.index0 == 2 %}prostoSprosit{% else %}onko{% endif %}">
+                                    {{ inc.inlineSvg(i.logo, '../static/img/fundProjects/' + i.logo + '.svg') }}
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="site-footer__slider-arrow swiper-button-next">
+                {{ inc.inlineSvg('arrow-navigation', '../static/img/icon/black-arrow-left.svg') }}
+            </div>
+        </div>
+        <div class="site-footer__service-information">
+            <div class="site-footer__sponsor-card">
+                <img src="../img/fundProjects/sponsorLogo.svg" alt="" class="site-footer__sponsor-logo">
+                <div class="site-footer__sponsor-info">
+                    <p class="site-footer__sponsor-disclaimer">Проект разработан при поддержке</p>
+                    <p class="site-footer__sponsor-name">Фонда президентских грантов</p>
+                </div>
+            </div>
+            <a href="#" class="site-footer__termsUse">Пользовательское соглашение</a>
+            <p class="site-footer__copyright">&copy;&nbsp;Всё не&nbsp;напрасно, 2021</p>
+        </div>
+    </div>
+</footer>

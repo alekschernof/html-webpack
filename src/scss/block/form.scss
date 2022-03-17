@@ -1,0 +1,33 @@
+$b: '.form-restore';
+
+#{$b} {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    flex: 0 1 100%;
+    margin-bottom: rem(20px);
+    max-width: rem(300px);
+    width: 100%;
+
+    & .form__result {
+      display: block;
+      width: 100%;
+      margin-top: rem(15px);
+
+      &.success {
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(16px);
+        line-height: 1;
+        color: $accent-base;
+      }
+
+      &.error {
+        color: $action-base;
+      }
+    }
+  }
+}

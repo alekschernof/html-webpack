@@ -1,0 +1,68 @@
+$b: '.inline-svg';
+
+#{$b} {
+  @include aspect-ratio();
+  position: relative;
+  display: block;
+  width: 100%;
+
+  @at-root {
+    span#{&} {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &[data-dir=up] svg {
+    transform: rotate(0);
+  }
+
+  &[data-dir=right] svg {
+    transform: rotate(90deg);
+  }
+
+  &[data-dir=down] svg {
+    transform: rotate(180deg);
+  }
+
+  &[data-dir=left] svg {
+    transform: rotate(270deg);
+  }
+
+  &[data-flip=horizontal] svg {
+    transform: scale(-1) rotateX(180deg);
+  }
+
+  &[data-flip=vertical] svg {
+    transform: scale(-1) rotateY(180deg);
+  }
+  
+  &-logo {
+    &-just-ask {
+      @include aspect-ratio(317, 114);
+    }
+    
+    &-onko-wiki {
+      @include aspect-ratio(139, 28);
+    }
+    
+    &-pm {
+      @include aspect-ratio(175, 42);
+    }
+    
+    &-screen {
+      @include aspect-ratio(186, 65);
+    }
+    
+    &-vnn {
+      &-text {
+        @include aspect-ratio(2125, 180);
+      }
+    }
+  }
+
+  svg {
+    @include fill-abs();
+    transform-origin: 50% 50%;
+  }
+}

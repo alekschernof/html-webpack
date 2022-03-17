@@ -1,0 +1,14 @@
+$b: '.floating-stone';
+
+#{$b} {
+  min-width: rem(12px);
+  min-height: rem(12px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/small-stone.svg");
+  background-position: center;
+
+  &._middle {
+    background-image: url("../img/middle-stone.png");
+  }
+}

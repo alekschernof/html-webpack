@@ -1,0 +1,203 @@
+$b: '.s-goal-donate';
+
+#{$b} {
+  position: relative;
+  padding-top: rem(250px);
+
+  @include mobile {
+    padding-top: rem(116px);
+  }
+
+  &__glare1 {
+    @include decor();
+    position: absolute;
+    top: rem(-350px);
+    max-width: rem(926px);
+    height: auto;
+    width: 100%;
+    min-height: rem(10px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    @include mobile {
+      top: rem(-150px);
+    }
+  }
+
+  &__f-stone1 {
+    position: absolute;
+    width: rem(60px);
+    height: rem(60px);
+    top: 0;
+    left: rem(130);
+  }
+
+  &__f-stone2 {
+    position: absolute;
+    width: rem(28px);
+    height: rem(28px);
+    right: 0;
+    transform: translateX(100%);
+    bottom: 0;
+  }
+
+  &__f-stone3 {
+    position: absolute;
+    bottom: 0;
+    left: rem(191px);
+    width: rem(28px);
+    height: rem(28px);
+  }
+
+  &__description {
+    position: relative;
+    max-width: rem(943px);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: rem(64px);
+
+    @include mobile {
+      margin-bottom: rem(56px);
+    }
+  }
+
+  &__support-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(64px);
+
+    @include mobile {
+      margin-bottom: rem(56px);
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &__header {
+    flex: 0 1 55%;
+
+    @include mobile {
+      flex-basis: 100%;
+      margin-bottom: rem(24px);
+    }
+  }
+
+  &__chart-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__start-block,
+  &__end-block {
+    flex: 0 1 49%;
+    margin-bottom: rem(16px);
+
+    @include mobile {
+      flex-basis: 100%;
+      margin-bottom: rem(12px);
+    }
+  }
+
+  &__start-block {
+    @include mobile {
+      order: 1;
+    }
+  }
+
+  &__end-block {
+    text-align: end;
+
+    @include mobile {
+      text-align: start;
+      order: 4;
+    }
+  }
+
+  &__donate-text {
+    font-size: rem(16px);
+    line-height: rem(20px);
+
+    &._top {
+      margin-bottom: rem(12px);
+    }
+
+    &._first,
+    &._second {
+      flex: 0 1 49%;
+
+      @include mobile {
+        flex-basis: 100%;
+      }
+    }
+
+    &._first {
+      @include mobile {
+        order: 2;
+        margin-bottom: rem(24px);
+      }
+    }
+
+    &._second {
+      text-align: end;
+
+      @include mobile {
+        text-align: start;
+        order: 5;
+      }
+    }
+  }
+
+  &__sum {
+    font-weight: bold;
+    font-size: rem(56px);
+    line-height: rem(48px);
+
+    @include mobile {
+      font-size: rem(48px);
+      line-height: rem(40px);
+    }
+
+    &::after {
+      content: " ₽";
+    }
+
+    &._start {
+      color: $sum-start;
+    }
+
+    &._end {
+      color: $sum-end;
+    }
+  }
+
+  &__chart-line,
+  &__chart-container {
+    border-radius: rem(40px);
+  }
+
+  &__chart-container {
+    flex: 0 1 100%;
+    box-shadow: 0 rem(24px) rem(56px) $shadow-base;
+    background-color: $white-true;
+    padding: rem(5px);
+    height: rem(21px);
+    margin-bottom: rem(16px);
+
+    @include mobile {
+      order: 3;
+      margin-bottom: rem(24px);
+    }
+  }
+
+  &__chart-line {
+    width: 0;
+    background: $progress-donate;
+    display: block;
+    height: 100%;
+    box-shadow: 0 3px 4px $shadow-progress-donate;
+    transition: width 1s ease-in-out;
+  }
+}
